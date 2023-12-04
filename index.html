@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <ul>
+        <li v-for="(item,index) in arrayOfObjects" :key="item.name">
+          index: {{index}} {{item.name}}is {{item.age}} old and hobbies are
+          <span v-for="(hoby,subIndex) in item.hobbies">
+            subindex is {{subIndex}}🛑{{hoby}}
+          </span>
+        </li>
+      </ul>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
